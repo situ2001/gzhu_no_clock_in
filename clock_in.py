@@ -8,7 +8,8 @@ from datetime import datetime
 
 session = msession.session
 
-def clock_in(stu_id):
+
+def clock_in(stu_id, token, chat_id):
     load_from_cookies(stu_id)
 
     res = session.get('http://yqtb.gzhu.edu.cn/infoplus/form/XNYQSB/start')
